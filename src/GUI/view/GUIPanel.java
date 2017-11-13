@@ -3,6 +3,7 @@ package GUI.view;
 import javax.swing.*;
 import GUI.controller.*;
 import java.awt.Color;
+import java.awt.event.*;
 
 public class GUIPanel extends JPanel {
 	private GUIController appController;
@@ -36,6 +37,10 @@ public class GUIPanel extends JPanel {
 		appLayout.putConstraint(SpringLayout.EAST, firstButton, 350, SpringLayout.WEST, this);
 	}
 	private void setupListeners() {
-		
+		firstButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent click) {
+				
+			}
+		});
 	}
 }
