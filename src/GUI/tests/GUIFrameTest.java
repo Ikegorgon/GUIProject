@@ -1,15 +1,15 @@
 /**
  * 
  */
-package gui.tests;
+package GUI.tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import gui.controller.GUIAppController;
-import gui.view.*;
+import GUI.controller.GUIController;
+import GUI.view.*;
 
 /**
  * @author CodyH
@@ -21,14 +21,14 @@ public class GUIFrameTest
 
 	private GUIFrame testFrame;
 	private GUIPanel testPanel;
-	private GUIAppController testController;
+	private GUIController testController;
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception
 	{
-		testController = new GUIAppController();
+		testController = new GUIController();
 		testFrame = new GUIFrame(testController);
 		testPanel = new GUIPanel(testController);
 	}
@@ -64,7 +64,7 @@ public class GUIFrameTest
 	public void testGetBaseController()
 	{
 		assertNotNull(testFrame.getBaseController());
-		assertTrue(testFrame.getBaseController() instanceof GUIAppController);
+		assertTrue(testFrame.getBaseController() instanceof GUIController);
 	}
 
 }
