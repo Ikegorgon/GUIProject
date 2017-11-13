@@ -20,4 +20,8 @@ public class GUIFrame extends JFrame {
 		this.setSize(500, 500);
 		this.setVisible(true);
 	}
+	public GUIController getBaseController() {
+		// TODO Auto-generated method stub
+		return appController;
+	}
 }
